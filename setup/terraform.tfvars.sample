@@ -1,0 +1,5 @@
+terraform_organization_name = "<hcp_terraform_organization>"
+terraform_project_name      = "<hcp_terraform_project_name>"
+terraform_workspace_name    = "<hcp_terraform_workspace_name>"
+label                       = "<resource_label>"
+location                    = "<azure_location>"

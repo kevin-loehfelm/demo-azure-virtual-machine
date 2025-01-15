@@ -14,6 +14,7 @@ resource "azurerm_resource_group" "compute" {
   location = var.location
 }
 
+# data source: hcp packer prod image for windows server 2022
 data "hcp_packer_artifact" "win2022_prod" {
   bucket_name  = "mswin-server-2022-base"
   channel_name = "prod"
@@ -21,6 +22,7 @@ data "hcp_packer_artifact" "win2022_prod" {
   region       = var.location
 }
 
+# data source: hcp packer dev image for windows server 2022
 data "hcp_packer_artifact" "win2022_dev" {
   bucket_name  = "mswin-server-2022-base"
   channel_name = "dev"
@@ -29,7 +31,7 @@ data "hcp_packer_artifact" "win2022_dev" {
 }
 
 # module: azure virtual machine - single vm
-module "dev" {
+module "single" {
   # source = "./modules/terraform-azurerm-virtual-machine"
   source  = "app.terraform.io/kloehfelm-demo/virtual-machine/azurerm"
   version = "1.0.0"
@@ -46,7 +48,7 @@ module "dev" {
 }
 
 # moddule: azure virtual machine - group of vms
-module "prod" {
+module "multi" {
   # source = "./modules/terraform-azurerm-virtual-machine"
   source              = "app.terraform.io/kloehfelm-demo/virtual-machine/azurerm"
   version             = "1.0.0"

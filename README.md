@@ -17,9 +17,9 @@
 
 | Name | Source | Version |
 |------|--------|---------|
-| <a name="module_dev"></a> [dev](#module\_dev) | app.terraform.io/kloehfelm-demo/virtual-machine/azurerm | 1.0.0 |
+| <a name="module_multi"></a> [multi](#module\_multi) | app.terraform.io/kloehfelm-demo/virtual-machine/azurerm | 1.0.0 |
 | <a name="module_network"></a> [network](#module\_network) | app.terraform.io/kloehfelm-demo/vnet/azurerm | 1.0.0 |
-| <a name="module_prod"></a> [prod](#module\_prod) | app.terraform.io/kloehfelm-demo/virtual-machine/azurerm | 1.0.0 |
+| <a name="module_single"></a> [single](#module\_single) | app.terraform.io/kloehfelm-demo/virtual-machine/azurerm | 1.0.0 |
 
 ## Resources
 
